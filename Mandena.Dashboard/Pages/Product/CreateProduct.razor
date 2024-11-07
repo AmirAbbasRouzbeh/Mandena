@@ -1,0 +1,74 @@
+﻿@page "/create-product"
+@using Mandena.Dashboard.Helper.Services
+@using Mandena.Application.DTOs.CategoriesDtos
+@using Mandena.Application.DTOs.ProductDtos
+@inject NavigationManager NavigationManager
+@inject ProductService ProductService
+@inject CategoryService CategoryService
+
+<h3>Create Product</h3>
+
+@if (Errors != null && Errors.Count > 0)
+{
+    foreach (var item in Errors)
+    {
+        <div style="background-color: red; border-radius: 14px; max-width: 200px">
+            <h3 style="color: white">You have error</h3>
+            <p>@item</p>
+        </div>
+    }
+}
+
+<EditForm Model="@newProduct" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+        <label>Name:</label>
+        <InputText @bind-Value="newProduct.Name" />
+    </div>
+    <div>
+        <label>Description:</label>
+        <InputText @bind-Value="newProduct.Description" />
+    </div>
+    <div>
+        <label>Product Type:</label>
+        <InputText @bind-Value="newProduct.ProductType" />
+    </div>
+    <div>
+        <label>Category:</label>
+        <InputSelect @bind-Value="newProduct.CategoryId">
+            <option value="">Select a category</option>
+            @foreach (var category in categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </InputSelect>
+    </div>
+
+    <button type="submit">Create Product</button>
+</EditForm>
+
+@code {
+    private CreateProductDTO newProduct = new CreateProductDTO();
+    private List<CategoryDTO> categories = new List<CategoryDTO>();
+    public List<string> Errors { get; set; } = new List<string>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = await CategoryService.GetCategories();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        bool success = await ProductService.CreateProduct(newProduct);
+        if (success)
+        {
+            NavigationManager.NavigateTo("/product-list");
+        }
+        else
+        {
+            Errors.Add("Add Product Failed!");
+        }
+    }
+}
