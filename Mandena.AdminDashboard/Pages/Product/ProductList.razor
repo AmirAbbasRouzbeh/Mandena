@@ -1,0 +1,31 @@
+﻿@page "/product-list"
+@using Mandena.AdminDashboard.Helper.Services
+@using Mandena.Application.DTOs.ProductDtos
+@inject ProductService ProductService
+
+<h3>Product List</h3>
+
+<button @onclick="GetProducts">Load Products</button>
+
+@if (products != null && products.Any())
+{
+    <ul>
+        @foreach (var product in products)
+        {
+            <li>@product.Name - @product.Description</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No products available.</p>
+}
+
+@code {
+    private List<ProductDTO> products;
+
+    private async Task GetProducts()
+    {
+        products = await ProductService.GetProducts();
+    }
+}

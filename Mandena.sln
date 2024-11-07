@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandena.Web", "Mandena.Web\Mandena.Web.csproj", "{CCD937C5-62A6-4D1F-BC70-D8792BACD09E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandena.Domain", "Mandena.Domain\Mandena.Domain.csproj", "{CF7FB190-7D8A-4434-8169-D71E87FDF0AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandena.Application", "Mandena.Application\Mandena.Application.csproj", "{A981190A-A9F6-48F9-A461-9583950780AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandena.Infrastructure", "Mandena.Infrastructure\Mandena.Infrastructure.csproj", "{77E6025A-14FD-49E4-BBF1-CB790E6E14EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandena.API", "Mandena.API\Mandena.API.csproj", "{78389A08-B027-4A2D-A15D-57C0B48CD31C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mandena.AdminDashboard", "Mandena.AdminDashboard\Mandena.AdminDashboard.csproj", "{3B3D765E-0834-4DCB-A1DB-82A5417EED58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCD937C5-62A6-4D1F-BC70-D8792BACD09E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCD937C5-62A6-4D1F-BC70-D8792BACD09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCD937C5-62A6-4D1F-BC70-D8792BACD09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCD937C5-62A6-4D1F-BC70-D8792BACD09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF7FB190-7D8A-4434-8169-D71E87FDF0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF7FB190-7D8A-4434-8169-D71E87FDF0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF7FB190-7D8A-4434-8169-D71E87FDF0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF7FB190-7D8A-4434-8169-D71E87FDF0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A981190A-A9F6-48F9-A461-9583950780AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A981190A-A9F6-48F9-A461-9583950780AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A981190A-A9F6-48F9-A461-9583950780AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A981190A-A9F6-48F9-A461-9583950780AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E6025A-14FD-49E4-BBF1-CB790E6E14EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77E6025A-14FD-49E4-BBF1-CB790E6E14EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77E6025A-14FD-49E4-BBF1-CB790E6E14EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77E6025A-14FD-49E4-BBF1-CB790E6E14EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78389A08-B027-4A2D-A15D-57C0B48CD31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78389A08-B027-4A2D-A15D-57C0B48CD31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78389A08-B027-4A2D-A15D-57C0B48CD31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78389A08-B027-4A2D-A15D-57C0B48CD31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B3D765E-0834-4DCB-A1DB-82A5417EED58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B3D765E-0834-4DCB-A1DB-82A5417EED58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B3D765E-0834-4DCB-A1DB-82A5417EED58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B3D765E-0834-4DCB-A1DB-82A5417EED58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0966A4C8-DEAF-4964-8E4D-145D55BD35A1}
+	EndGlobalSection
+EndGlobal
